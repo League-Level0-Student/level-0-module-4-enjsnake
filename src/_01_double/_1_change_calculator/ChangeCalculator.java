@@ -2,7 +2,7 @@ package _01_double._1_change_calculator;
 
 import javax.swing.JOptionPane;
 
-/*
+/*f
  * I have a pocket full of change. I hate doing math. Make me a program that
  * will calculate how much money I have without me having to use my brain.
  */
