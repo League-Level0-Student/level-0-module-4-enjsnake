@@ -4,15 +4,16 @@
 	 * If you cannot play sound on this computer, set canPlaySounds to false.
 	 * If you are not sure, ask your teacher 
 	 * *****************/
-boolean canPlaySounds = true;
+boolean canPlaySounds = false;
 
 void setup() {
   
   //Find a Where's Waldo picture and drop it into this sketch.     
-  PImage waldo = loadImage("waldo.jpg"); // Change this to match your file name.
+  PImage waldo = loadImage("galaxy.jpg"); // Change this to match your file name.
   size(600, 400); 
+  waldo.resize(600,400);
   // Resize your waldo picture to the same size as the sketch
-  
+  background(waldo);
   // Make the waldo image your sketch background
 
 }
@@ -20,13 +21,18 @@ void setup() {
 void draw() {
 
       // If the user presses the mouse .......
-  
+        if(mousePressed){
+          
           // Use this print statement to help you find the location of Waldo to use in the code below
           // println("X: " + mouseX + " Y: " + mouseY); 
-    
+          
+        
           // Check if the location of the mouse is anywhere on the image of Waldo.
           // If it is, print “Waldo found!”  Use the text() command to write it on the sketch.
-          
+         if(mouseX>505 && mouseX<526 && mouseY>44 && mouseY<71){
+           text("Waldo Found!!", 300,200);
+         }
+        }
                 if (canPlaySounds) {
                     // Use the playWhoohoo() method below. You can change the sound if you want 
                 } 
